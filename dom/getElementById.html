@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2> Get Element By Id Example</h2>
+        <p id="target"> Hello Guys!</p>
+        <button onclick="abc()"> Click Here</button>
+        <script>
+           function abc(){
+               //get element paragraph 
+               var elem=document.getElementById("target");
+               var getData=elem.innerHTML;
+               alert(getData)
+               elem.innerHTML=" I am fine ! What about You";
+               elem.style.color="green";
+               elem.style.border="2px solid red"
+           }
+        </script>
+    </body>
+</html>

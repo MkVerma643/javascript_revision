@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2> Get Element By Name Example</h2>
+         Gender : <input type="radio" name="r1" value="male"/> Male 
+                  <input type="radio" name="r1" value="female"/> Female <br/>
+        <button onclick="abc()"> Click Here</button>
+        <script>
+           function abc(){
+               //get element paragraph 
+               var elem=document.getElementsByName("r1");
+               elem.forEach((val)=>{
+                   if(val.checked){
+                       alert(val.value)
+                   }
+               })
+              
+           }
+        </script>
+    </body>
+</html>

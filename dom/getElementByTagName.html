@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2> Get Element By Tag Example</h2>
+        <p> para1</p>
+        <p> para2</p>
+        <p> para3</p>
+        <button onclick="abc()"> Click Here</button>
+        <script>
+           function abc(){
+               //get element paragraph 
+               var para=document.getElementsByTagName("p");
+              console.log(para)
+              for(i=0;i<para.length;i++){
+                  console.log(para[i].innerHTML)
+              }
+           
+
+           }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        
+        <script src="" async defer></script>
+        <script>
+            var n = 123456789;
+            let sum = 0;
+            let rev = 0;
+           
+            while(n>0){
+                sum += n%10;
+                n = Math.floor(n/10);
+            }
+            while(sum>0){
+                rev = rev*10 + sum%10;
+                sum = Math.floor(sum/10);
+            }
+            console.log(sum, rev);
+        </script>
+    </body>
+</html>

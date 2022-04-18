@@ -1,0 +1,30 @@
+--> Javascript: client side language support
+//
+Old javaScript:
+Vanilla javaScript
+
+ES6 | ES7 Javascript
+
+Then,
+ TypeScript (SuperSet of Javascript)
+
+3 Main Element of Javascript
+1. ECMA
+2. DOM
+3. BOM
+
+Javascript Engines:
+Chrome : V8 JS engine
+Firefox : SpiderMonkey JS engine
+IE : IE JS engine Chakra JS engine
+
+Modern JS engine are known as JIT Just in Time compilers, that compile js code into bytecode for Improved Performance.
+
+JS is Case Sensitive language, with extension .js, in the <script> tag.
+
+Varaibles, arrays, functions, arrays, objects, etc.
+
+Datatype : it allocate at run time as per Variables values.
+
+Html is Interpreter language, it is not compiled.
+Javascript is client side language, it is not compiled.

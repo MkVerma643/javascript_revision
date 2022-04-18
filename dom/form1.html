@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2> Validation</h2>
+        Fullname <input type="text" id="t1"/><span id="errorName"></span><br/>
+        Age <input type="text" id="t2"/><span id="errorAge"></span><br/>
+        Mobile <input type="text" id="t3"/><span id="errorMobile"></span><br/>
+        <button onclick="abc()"> Click Here</button>
+        <script>
+           function abc(){
+               var fname=document.getElementById("t1").value;
+               var age=document.getElementById("t2").value;
+               var mobile=document.getElementById("t3").value;
+               var regFullname=/^[a-zA-Z ]+$/;
+               var regage=/^[0-9]{1,2}$/;
+               var regmobile=/^[6-9][0-9]{9}$/;
+               if(!regFullname.test(fname))
+               {
+                    // document.getElementById("t1").focus()
+                    document.getElementById("errorName").innerHTML="Only Alphabate allow in full name";
+                    document.getElementById("t1").style.border="1px solid red";
+               }
+               else if(!regage.test(age)){
+                    // document.getElementById("t2").focus()
+                    document.getElementById("errorAge").innerHTML="Only 1 or 2 digit allow in age";
+                    document.getElementById("t2").style.border="1px solid red";
+               }
+               else if(!regmobile.test(mobile)){
+                    // document.getElementById("t3").focus()
+                    document.getElementById("errorMobile").innerHTML="Only 10 digit allow in mobile start between [6-9]";
+                    document.getElementById("t3").style.border="1px solid red";
+               }
+               else {
+                   alert("Done");
+               }
+           }
+        </script>
+    </body>
+</html>

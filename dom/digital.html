@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2> Digital Clock</h2>
+         Time : <span id="target"></span>
+        <script>
+           function clock(){
+              var d=new Date();
+              var mytime=d.getHours()+" : "+d.getMinutes()+" : "+d.getSeconds();
+              document.getElementById("target").innerHTML=mytime;
+           }
+           setInterval(clock,1000)
+        </script>
+    </body>
+</html>

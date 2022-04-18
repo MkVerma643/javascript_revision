@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2> Stop Watch</h2>
+        <p id="target"></p>
+        <button onclick="start()"> Start</button>
+        <button onclick="stop()"> Stop</button>
+        <script>
+            count=0;
+            function counter(){
+                count++;
+                document.getElementById("target").innerHTML=count;
+            }
+          function start(){
+              interval=setInterval(counter,1000);
+          }
+          function stop(){
+              clearInterval(interval)
+          }
+        </script>
+    </body>
+</html>

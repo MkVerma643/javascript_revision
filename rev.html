@@ -1,0 +1,17 @@
+<!Doctype html>
+<html>
+    <body>
+        <script>
+          var number=parseInt(prompt("Enter Value"));//123
+          var sum=0;
+          var rev=0;
+          while(number>=1){ 
+              x=number%10;//3 2 1
+              rev=(rev*10)+x;//3 32  321
+              sum+=x;//3 5 6
+              number=parseInt(number/10);//12 1
+          }
+          console.log(sum+"----"+rev);
+        </script>
+    </body>
+</html>

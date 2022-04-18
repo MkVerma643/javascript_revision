@@ -1,0 +1,160 @@
+--> Javascript :- It is an client side scripting language which is used to apply some dynamic contents in our web page like some animations , event handling , validations etc.
+  -> Client side language :- which are execute by the browser 
+  -> Scripting language :- interprting language (line by line )
+  -> Javascript is know as ECMAScript (ES)
+    -> ECMAScript standard 
+      -> Old Javascript (Vanilla Javascript) (Es 5)
+      -> Es6 | Es 7 (New features )
+      -> Typescript (Superset Javascript)
+    -> In a web browser , Javascript consists of three main parts 
+     -> ECMAScript provides core functionility 
+     -> DOM provides interface for interacting with elements 
+     -> BOM provides browser apis for interacting with browser.
+    -> How Javascript program is executed 
+    When a web page is loaded , the Javascript engine in the browser executes the javascript code. Then the js code modifies Html and Css to update the UI dynamically.
+    -> Every Browser have a javascript engine 
+      -> Chrome :- V8 
+      -> Firefox : Spider Monkey 
+      -> ie :- chakra 
+        => Modern javascript engines are typically implemented as JIT (just-in-time) compilers that compile Javascript code to bytecode for improved performance.
+    -> Javascript is a case sensitive language 
+    -> Extension is .js 
+    -> <script> tag 
+      home.html 
+      <html>
+         <head>
+           <script>
+             javascript 
+           </script>
+           <script src="filename.js"></script>
+         </head>
+         <body>
+         </body>
+      </html>
+      --> Comments :- to describe the code 
+        -> single : // 
+        -> multiple : /*  */
+      -> Concatenation (+)
+      ->  Core Javascript 
+        -> Variables , Datatypes , Operators , Conditions , loop , array , functions 
+      -> Output 
+         document.write("--");//browser 
+         console.log("--");//console prompt (debug) (all erros are display in a console)
+        -> Developer tool :- It allow us to test and debug the javascript code.
+      -> Variables :- temp memory location which hold input data 
+         -> syntex 
+           var varname=value;
+           eg:
+           var empName="anuj";
+           var emp_salary=23456;
+             -> start with [a-zA-Z_$]
+             -> after it combination of [a-zA-Z0-9_]
+          -> Datatype :- allocate at runtime as per the variable value 
+            -> loosly type language 
+            number , string , boolean , array , object , null , undefined 
+            --> typeof variablename
+            -> Operators 
+               -> arthematic : +, - , / ,* ,%,++, -- 
+               -> assignment : = , +=, -= , /= , *= ,%= 
+               -> relational :- > , < ,>= , <= 
+               -> logical :- &&  , || , ! 
+               -> comparison 
+                 == : only check value 
+                 === : check both type and value 
+                 != 
+                 !== 
+                 eg:
+                  var x=10;
+                  var y="10";
+                  if(x==y) (true)
+                  if(x===y) (false)
+                -> ternary operator 
+                (condition? true :false)
+                var a=10;
+                var b=20;
+                var result=(a>b ? "A" : "B")
+                -> Conditions 
+                  if else , if else if else , nested if , switch case 
+                -> Loop : Iteration 
+                  -> for : Iteration (condition is check at the start)
+                  -> while :- only the condition (boolean) (condition is check at the start)
+                  -> do-while :- This loop execute at least once , while a condition is correct or not.
+                -> array :- we can store multiple value in a single variable of any type .
+                   -> syntex: 
+                     var arrayname=new Array(val,val,val,..)
+                       or 
+                     var arrayname=[val,val,val..](prefer)
+                -> function 
+                -->Tak 
+                while(condition){
+                  statement
+                }
+               ->  WAp to assign any number in a variable and find the sum of the digit and reverse it 
+               -> Wap to assign values in an array and find the sum and the largest value of an array ?
+              -> FUnction :- reusability (to perform a specific task)
+                function add(a,b){
+                  return (a+b);
+                }
+                var add=function(a,b){
+                  return (a+b);
+                }
+                console.log(add(3,4));//7
+              -> Events :- to perform a task 
+          Events        Event Handler 
+        click            onclick 
+        dblclick 
+        mouseover 
+        mouseout 
+        keyup 
+        keydown 
+        keypress 
+        blur 
+        focus 
+        change 
+        load 
+        reload
+        submit 
+        scroll 
+     
+        -> DOM :- It stand for Document Object Model. It is an api for manipulating HTML documents.
+          The DOM represents Html document as a tree of node. It provides functions that allow us to add, remove , and modify parts of the documents effectively.
+        -> Javascript is used for run time dom manupulation.
+          eg:
+          <html>
+             <head>
+                <title> My title </title>
+             </head>
+             <body>
+               <p> My body </p>
+             </body>
+          </html>
+            -> Tree Formet 
+            Document 
+                 html 
+                     head 
+                         title
+                              text:My title 
+                     body 
+                        p 
+                            text : My Body 
+        -> Selecting Elements 
+          ** getElementById() :- select an element by id 
+          -> getElementsByName() :- select elements by name (array)
+          -> getElementsByClassName() :- select elements by class (array)
+          -> getElementByTagName() :- select elements by tag name (array)
+          -> querySelector() - select element by Css Selectors 
+        -> Maupulating Elements 
+         innerHTML :- get and set the HTML content of an element 
+         textContent :- get and set the text content of an element
+         createElement() : create a new element 
+
+         --> Task
+         Create Todo list 
+        Todo List 
+      Task :  textbox 
+          Add /Update
+      S.no  Name   Action 
+      1     A       Edit Delete
+      2     B       Edit Delete
+
+          
