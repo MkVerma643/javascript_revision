@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2> Prorotype</h2>
+    <script>
+        function person(){
+            this.name="anuj";
+            this.age=23;
+        }
+        person.prototype.gender="male";
+        var obj=new person();
+        var obj1=new person();
+        console.log(obj.gender)
+        console.log(obj1.gender)
+
+    </script>
+</body>
+
+</html>

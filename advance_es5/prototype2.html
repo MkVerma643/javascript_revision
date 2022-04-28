@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2> Prorotype</h2>
+    <script>
+      function Car(){
+          this.speed=80;
+      }
+      Car.prototype.acc=function(){
+          this.speed+=50;
+      }
+      Car.prototype.checkspeed=function(){
+          console.log("The speed is "+this.speed);
+      }
+     var obj=new Car();
+     obj.checkspeed();
+     obj.acc();
+     obj.checkspeed();
+    </script>
+</body>
+
+</html>

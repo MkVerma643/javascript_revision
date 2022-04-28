@@ -1,0 +1,56 @@
+--> Es 6 | 7 :- new features introduced in javascript 
+  -> let keyword :- we can define local scope of a variable in a particular scope. 
+    for(let i=1; i<=5 ; i++){
+        console.log(i)
+    }
+    console.log(i);//i is not defined
+    if(conditon){
+        let x=10;
+    }
+    x;//not defined 
+    let b=10;
+    let b=20;//cant be redeclare 
+  -> constant :- It is a value that never be changed . It is fixed and permanent 
+    const API="path";
+  -> template literal (backtrick symbol `` combine both string and variable)
+  let a=10;
+  let b=20;
+  let sum=a+b;
+  console.log(`The sum of ${a} and ${b} is ${sum}`);
+  -> arrow function (=>) :- sort and concise code 
+     function add(a,b){
+         return (a+b)
+     }
+     let add=function(a,b){
+         return (a+b)
+     }
+     //arrow function 
+       let add=(a,b)=>(a+b);
+       let add=(a,b)=>{
+           return (a+b)
+       }
+       eg:
+       let arr=[23,45,67,889,9];
+       let sum=0;
+       arr.forEach(val=> sum+=val);
+    --> Spread operator and rest parameter 
+       --> spread operator (...) :- is used to copy or spread array or object in new array or object.
+          eg:
+          let arr=[2,3,4,5];
+          let newArr=[...arr,7,8];//2 3 4 5 7 8 
+          let obj={name:'anuj',age:23};
+          let newobj={...obj,name:'sumit',city:'noida'} 
+            {name:'sumit',age:23,city:'noida'}
+        --> rest parameter (...) :- we can pass n  number arguments in a function. Limitation is that rest parameter is the last formal parameter of the method.
+        --> Task 
+          Convert to do list in es 6 features 
+        --> OOps features 
+          *** class , constructor , getter,setter , computed properties  , static methods , inheritance 
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2> IIFE</h2>
+    <script>
+      var calc=function(){
+         return {
+             add:function(a,b){
+                 return (a+b)
+             },
+             sub:function(a,b){
+                 return (a-b)
+             }
+         }
+      }()
+      console.log(calc.add(2,3));
+      console.log(calc.sub(10,2))
+    </script>
+</body>
+
+</html>

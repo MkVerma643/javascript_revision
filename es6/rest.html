@@ -1,0 +1,17 @@
+<!Doctype html>
+<html>
+    <body>
+        <h2> Rest Parameter</h2>
+        <script>
+            function myAdd(v,...args){
+                let sum=0;
+                args.forEach(val=> sum+=val);
+                return sum;
+            }
+            console.log(myAdd(2,3))
+            console.log(myAdd(2,3,4))
+            console.log(myAdd(2,3,4,4))
+            console.log(myAdd(2,3,4,5,6))
+        </script>
+    </body>
+</html>

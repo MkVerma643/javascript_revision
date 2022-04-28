@@ -1,0 +1,35 @@
+---> Objects :- Objects are used to store information in the form of key value pairs.It is a standalone entity,with properties and type. (in object we can store properties and methods)
+  -> Object Literal 
+    var obj={
+        fname:"anuj",
+        lname:"singh",
+    fullName:function(){
+        return this.fname+" "+this.lname;
+       }
+    }
+    console.log(obj.fname);
+    console.log(obj.fullName())
+ -> Object Constructor 
+ var obj=new Object();
+ obj.fname="anuj";
+ obj.lname="singh";
+ obj.fullName=function(){
+
+ }
+
+ -> Prototype :- It is an object that is associated with every function and objects by default in javascript. with the help of prototype keyword we add or modify properties and methods later on in the objects and functions.
+   
+   --> Car class 
+      -> by default speed : 80
+        -> 2 methods 
+           -> acc 
+              speed+=50
+           -> checkspeed
+            display current speed 
+  --> Module Pattern (IIFE :- Immediatly Invoke function expression)
+   (function(){
+
+   })();
+ --> Hoisting :- It is an inbuild mechanism in javascript (default behaviour) of moving all declarations of variable and functions to the top of the program before code execution.
+   -> variable and function 
+---> *** Es 6 |7 
