@@ -1,0 +1,19 @@
+<!Doctype html>
+<html>
+    <body>
+        <h2> Reduce Example</h2>
+        <script>
+        let obj=[
+              {id:1,name:"a",salary:23456},
+              {id:2,name:"b",salary:33456},
+              {id:3,name:"c",salary:43456},
+              {id:4,name:"d",salary:53456}
+            ]
+            let totalSalary=obj.reduce((sum,val,rev)=> {
+                console.log(sum+"---"+val.salary+"---"+rev)
+                return sum+val.salary
+            } ,0);
+            console.log(totalSalary);
+        </script>
+    </body>
+</html>

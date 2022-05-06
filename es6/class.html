@@ -1,0 +1,23 @@
+<!Doctype html>
+<html>
+    <body>
+        <h2> Rest Parameter</h2>
+        <script>
+           class Car{
+            constructor(){
+              this.speed=100;
+            }
+            acc(){
+              this.speed+=50;
+            }
+            checkspeed(){
+              console.log(`The speed is ${this.speed}`)
+            }
+          }
+          const obj=new Car();
+          obj.checkspeed();
+          obj.acc();
+          obj.checkspeed();
+        </script>
+    </body>
+</html>

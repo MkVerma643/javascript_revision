@@ -45,8 +45,122 @@
         --> Task 
           Convert to do list in es 6 features 
         --> OOps features 
-          *** class , constructor , getter,setter , computed properties  , static methods , inheritance 
+          oops :- object oriented programing structure
+          -> reusability 
+          -> ** memory management 
+          -> security 
+        -> Class :-class is a group of data members , member functions and its properties.
+          --> constructor :- used to initilize some data when object is created.
+          class Car{
+            constructor(){
+              this.speed=100;
+            }
+            acc(){
+              this.speed+=50;
+            }
+            checkspeed(){
+              console.log(`The speed is ${this.speed}`)
+            }
+          }
+          --> getter snd setter
+           class Person{
+               constructor(name){
+                  this._name=name;
+               }
+               get name(){
+                   return this._name;
+               }
+               set name(newName){
+                   this._name=newName;
+               }
+           }
+           const obj=new Person("sumit");
+           console.log(obj.name)
+           obj.name="amit"
+           console.log(obj.name)
+          -> static methods and properties :- they directily call with class name (standalone property)
+           class Person {
+             constructor(name){
+               this.name=name;
+             }
+             getName(){
+               return this.name;
+             }
+             static xyz(gender){
+               let name=gender=="male"?"sumit":"anaaya";
+               return new Person(name);
+             }
+           }
+           --> Computed property :- [] result of the expression as the property name of an object.
 
+           let propName="c";
+           const obj{
+             a:1,
+             b:2,
+            [propName]:3
+           }
+          
+          const handler=(event)=>{
+            let {name,value}=event.target;
+            setState({...state,[name]:value})
+          }
+         <input type="text" name="fname" onChange={handler}/>
+         <input type="text" name="lname" onChange={handler}/>
+
+         --> Inheritance :- reusability , to access the parent class properties in a child class.
+           extends and super keyword are used to acheive it.
+        --> Destructuring :- destructure the array or object values into a normal variable.
+         eg:
+           let arr=["anuj","anil","sunil"];
+           let [a,b,c]=arr;
+           let obj={name:"anuj",age:23};
+           let {name,age}=obj;
+        --> map | filter | reduce 
+        -> map():- return an array with all values 
+          eg:
+            let arr=[2,3,4,5,6];
+            let newArr=arr.map(val=> val*2);// 4 6 8 10 12 
+
+            eg: (react js)
+              let names=["anuj","anil","sunil"];
+              <ul>
+                {names.map(val=>
+                      <li> {val} </li>
+                )}
+              </ul>
+          -> filter() :- return an array with filter data 
+          eg:
+            let arr=[2,3,4,5,6,7,8];
+            let newArr=arr.filter(val=> val%2==0);//2 4 6 8 
+          eg:
+            let obj=[
+              {id:1,name:"a",salary:23456},
+              {id:2,name:"b",salary:33456},
+              {id:3,name:"c",salary:43456},
+              {id:4,name:"d",salary:53456}
+            ]
+            let filterObj=obj.filter(val=> val.salary>40000);
+          -> reduce :- return a single value with the given array to perfome the calculations.
+         let obj=[
+              {id:1,name:"a",salary:23456},
+              {id:2,name:"b",salary:33456},
+              {id:3,name:"c",salary:43456},
+              {id:4,name:"d",salary:53456}
+            ]
+            let totalSalary=obj.reduce((sum,val)=> {
+                console.log(sum+"---"+val.salary)
+                return sum+val.salary
+            } ,0);
+            console.log(totalSalary);
+          --> Modules :- module is a filter where we put our common functionalities and we use them anywhere in the application 
+             import | export 
+          -> 
+             callback 
+             promise 
+             async/await 
+             Iterators | Generator Function | Symbol | Map | Set | closures 
+          -> Typescript 
+ 
 
 
 

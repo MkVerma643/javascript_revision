@@ -1,0 +1,23 @@
+<!Doctype html>
+<html>
+    <body>
+        <h2> Rest Parameter</h2>
+        <script>
+        class Person {
+             constructor(name){
+               this.name=name;
+               console.log(name)
+             }
+             getName(){
+               return this.name;
+             }
+             static xyz(gender){
+               let name=gender=="male"?"sumit":"anaaya";
+               return new Person(name);
+             }
+           }
+           const obj=Person.xyz("male")
+           console.log(obj.getName());
+        </script>
+    </body>
+</html>

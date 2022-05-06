@@ -1,0 +1,40 @@
+<!Doctype html>
+<html>
+    <body>
+        <h2> Rest Parameter</h2>
+        <script>
+        //    class Person{
+        //        constructor(name){
+        //           this.setName(name)
+        //        }
+        //        getName(){
+        //            return this.name;
+        //        }
+        //        setName(newName){
+        //            this.name=newName;
+        //        }
+        //    }
+        //    const obj=new Person("sumit");
+        //    console.log(obj.getName())
+        //    obj.setName("Amit");
+        //    console.log(obj.getName())
+        class Person{
+               constructor(name){
+                  this._name=name;
+               }
+               get name(){
+                   return this._name;
+               }
+               set name(newName){
+                   this._name=newName;
+               }
+           }
+           const obj=new Person("sumit");
+           console.log(obj.name)
+           obj.name="amit"
+           console.log(obj.name)
+
+          
+        </script>
+    </body>
+</html>
