@@ -1,0 +1,21 @@
+<!Doctype html>
+<html>
+    <body>
+        <h2> Fetch Posts</h2>
+        <button onclick="fetchData()"> Fetch Latest Posts</button>
+        <script>
+            async function fetchData()
+            {
+                try{
+             const APIURL="https://jsonplaceholder.typicode.com/posts";
+             const res=await fetch(APIURL);
+             const data=await res.json();
+             console.log(data);
+                }
+                catch{
+                    console.log("Error Occured")
+                }
+          }
+        </script>
+    </body>
+</html>

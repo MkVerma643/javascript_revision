@@ -1,0 +1,41 @@
+<!Doctype html>
+<html>
+    <body>
+        <h2> Call Back FUnction</h2>
+        <script>
+            function getUser(userId){
+                return new Promise((resolve,reject)=> {
+               setTimeout(()=>{
+                  resolve({
+                      userId:userId,
+                      username:'sumit'
+                  })
+               },2000)
+            })
+            }
+            function getServices(user){
+                return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                   resolve(['email','sms','vpn'])
+                },2000)
+            })
+            }
+            function getServiceCost(services){
+             return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                  resolve(services.length*200);
+                },3000)
+            })
+            }
+          getUser(101)
+           .then(getServices)
+           .then(getServiceCost)
+           .then(res=>{
+               console.log(res)
+           })
+           .catch(err=>{
+               console.log(err)
+           })
+        </script>
+    </body>
+</html>

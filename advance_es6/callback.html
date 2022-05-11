@@ -1,0 +1,33 @@
+<!Doctype html>
+<html>
+    <body>
+        <h2> Call Back FUnction</h2>
+        <script>
+            function getUser(userId,callback){
+               setTimeout(()=>{
+                  callback({
+                      userId:userId,
+                      username:'sumit'
+                  })
+               },2000)
+            }
+            function getServices(user,callback){
+                setTimeout(()=>{
+                   callback(['email','sms','vpn'])
+                },2000)
+            }
+            function getServiceCost(services,callback){
+                setTimeout(()=>{
+                  callback(services.length*200);
+                },3000)
+            }
+            getUser(101,(user)=>{
+                getServices(user,(services)=>{
+                    getServiceCost(services,(cost)=>{
+                        console.log('The service cost is '+cost)
+                    })
+                })
+            })
+        </script>
+    </body>
+</html>

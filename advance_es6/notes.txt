@@ -155,11 +155,110 @@
           --> Modules :- module is a filter where we put our common functionalities and we use them anywhere in the application 
              import | export 
           -> 
-             callback 
-             promise 
-             async/await 
-             Iterators | Generator Function | Symbol | Map | Set | closures 
-          -> Typescript 
+            Callback :- are used to deal with asynchronous operations.When we nest many callback functions , the code will be more difficult to maintain.
+            eg:
+              function getUser(userId,callback){
+               setTimeout(()=>{
+                  callback({
+                      userId:userId,
+                      username:'sumit'
+                  })
+               },2000)
+            }
+            function getServices(user,callback){
+                setTimeout(()=>{
+                   callback(['email','sms','vpn'])
+                },2000)
+            }
+            function getServiceCost(services,callback){
+                setTimeout(()=>{
+                  callback(services.length*200);
+                },3000)
+            }
+            getUser(101,(user)=>{
+                getServices(user,(services)=>{
+                    getServiceCost(services,(cost)=>{
+                        console.log('The service cost is '+cost)
+                    })
+                })
+            })
+            --> If we have a multiple callback functions then we have callback issue.
+          Es6 introduce the promises that allow us to write asynchronous code in more manageable ways.
+        --> promise :- used to handle asynchronous operations.
+           -> A promise object has 3 states 
+              -> Pending :- when promise start it goes to pending state 
+              -> Fulfilled with a value 
+              -> Rejected for a reason 
+             syntex:
+          const promise=new Promise((resolve,reject)=>{
+            let age=24;
+             if(age>=18){
+               setTimeout(()=>{
+                 resolve("Elligible")
+               },2000)
+             }
+             else {
+               reject("Not Elligible")
+             }
+          })
+          -> Consuming a Promise ( then , catch)
+            -> then() method :- used to get the value of a promise when it is Fulfilled.
+            promise.then(res=>{
+              console.log(res)
+            })
+            ->catch() :- used to get a error or rejected value 
+             promise.then(res=>{
+              console.log(res)
+            })
+            .catch(err=>{
+              console.log(err)
+            })
+          -> Promise Chaining 
+          if we want to execute 2 or more related asynchronous operations , where the next operation starts with the result from the previous step then we use promise chain.
+          eg:
+
+          --> fetch() :- inbuild nethod of javascript for consuming apis and return promise 
+            https://jsonplaceholder.typicode.com/
+            https://jsonplaceholder.typicode.com/posts
+
+            const APIURL="https://jsonplaceholder.typicode.com/posts";
+            fetch(APIURL)
+            .then(res=> res.json())
+            .then(data=>{
+              console.log(data)
+            })
+            -> Assignment 
+            consume all 6 apis of jsonplaceholder and render the data in the DOM.
+          -> async await:- 
+             aysnc keyword :- if we put async before any of the function then it return promise
+    async function abc(){
+              return "hello";
+          }
+          -> await :- to wait for a Promise to settle either in resolved or rejected state.
+          -> await used only in a async function 
+          async function display(){
+            let result=await abc();
+            console.log(result);
+          }
+      -> Json Server :- It provide us rest apis behalf of the json data 
+        -> npm install json-server --g 
+        --> server 
+           products.json 
+           {
+             "products":[
+               {"id":1,"pname":"A","price":23456,"quantity":3},
+               {"id":2,"pname":"B","price":33456,"quantity":4},
+               {"id":3,"pname":"C","price":43456,"quantity":5}
+             ]
+           }
+           -> open folder in cmd 
+           json-server --watch products.json --port 3001
+          --> With the help of Json server , create a crud app in javascript ,with asyc await approach ?
+          
+      "id": 1,
+      "pname": "A",
+      "price": 23456,
+      "quantity": 3
  
 
 
