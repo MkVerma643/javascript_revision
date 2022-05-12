@@ -1,0 +1,65 @@
+--> Typescript :- It is an superset of Javascript. Ahead of Javascript.We create a typescript file , it compile by the tsc compiler and convert into the plain Javascript (es5).
+  -> extension is .ts 
+
+  Typescript File  -----> Typescript compiler ---> Plain Javascript (ES5)
+  -> case senstive language 
+  -> with the help of it we can write object oriented code like class , inheritance , abstract , interfaces etc,
+  -> It is a strongly type langauge.
+  --> Install typescript 
+    --> Node Js Environment 
+      node js download and install 
+     ->  https://nodejs.org/en/download/
+       -> open cmd 
+       npm install typescript --g 
+       -> check 
+       open cmd 
+       tsc 
+    -> first.ts 
+    console.log("Hello Typescript");
+
+    -> open folder in cmd 
+      tsc first.ts (compile and generate .js file)
+      node first.js 
+      Hello Typescript 
+    -> Types in typescript
+     let variablename:type=value 
+     -> number 
+      let age:number=34;
+     -> string 
+      let fname:string="" , '' , ``
+     -> boolean 
+      let status:boolean=true
+     -> object 
+       let empData:object;
+       empData={
+
+       }
+     -> array 
+      let arr:string[]=['','','']
+     -> tuple
+      let arr:[string,number,string]=['amit',23,'noida']
+     -> enum : It is a group of named constant.
+        enum Days{
+            Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday
+        }
+     -> any
+        let empData:any;
+     -> union 
+       let data:number|string
+     -> void :- function 
+     function abc():void
+     {
+
+     }
+     -> never : it is a type that containes no values (error throw)
+       function myError(message:string):never {
+           throw new Error(message)
+       }
+  -> class 
+  -> getter and setter 
+-> static methods and properties :- They are standalone properties . define with static keyword and call with classname 
+
+--> Access Modifiers 
+  private :- within a class 
+  protected :- within a class and her derived class
+  public :- default (accessible anywhere)
